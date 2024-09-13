@@ -1,0 +1,167 @@
+/* General Container Styling */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Header Styling */
+.container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* New Contact Button */
+.new-contact-btn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.new-contact-btn .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-contact-btn .btn:hover {
+  background-color: #45a049;
+}
+
+/* Contact Card Styling */
+.contact-card {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #4CAF50;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card h2 {
+  font-size: 1.5rem;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.contact-card p strong {
+  color: #555;
+}
+
+/* Action Buttons */
+.actions {
+  margin-top: 15px;
+}
+
+.actions .btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.actions .btn:hover {
+  background-color: #1976D2;
+}
+
+.actions .btn:last-child {
+  background-color: #FFC107;
+}
+
+.actions .btn:last-child:hover {
+  background-color: #FFB300;
+}
+
+/* Delete Button */
+.actions .btn:nth-child(2) {
+  background-color: #F44336;
+}
+
+.actions .btn:nth-child(2):hover {
+  background-color: #D32F2F;
+}
+
+/* Pagination Controls */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pagination .btn {
+  background-color: #607D8B;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .btn:hover {
+  background-color: #455A64;
+}
+
+.pagination span {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Disabled Button */
+.btn[disabled] {
+  background-color: #B0BEC5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 10px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .contact-card p {
+    font-size: 0.9rem;
+  }
+
+  .actions .btn {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagination .btn {
+    margin-bottom: 10px;
+  }
+
+  .pagination span {
+    margin-bottom: 10px;
+  }
+}

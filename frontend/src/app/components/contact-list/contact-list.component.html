@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Contactos</h1>
+  <!-- New Contact Button -->
+  <div class="new-contact-btn">
+    <button class="btn" [routerLink]="['/contactos/nuevo']">Nuevo Contacto</button>
+  </div>
+  <div *ngFor="let contact of contacts" class="contact-card">
+    <h2>{{ contact.nombre }}</h2>
+    <p><strong>Compañia:</strong> {{ contact.empresa }}</p>
+    <p><strong>Notas:</strong> {{ contact.notas }}</p>
+    <div class="actions">
+      <button class="btn" [routerLink]="['/contactos/editar', contact.id]">Editar</button>
+      <button class="btn" (click)="deleteContact(contact.id)">Borrar</button>
+      <button class="btn" [routerLink]="['/contactos/detalles', contact.id]">Detalles</button>
+    </div>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div class="pagination">
+    <button class="btn" (click)="previousPage()" [disabled]="!prevPageUrl">Atras</button>
+    <span>Pagina {{ currentPage }} de {{ totalPages }}</span>
+    <button class="btn" (click)="nextPage()" [disabled]="!nextPageUrl">Siguiente</button>
+  </div>
+</div>

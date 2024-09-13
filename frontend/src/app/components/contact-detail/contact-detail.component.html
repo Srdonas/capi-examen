@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Contact Details</h1>
+
+  <div class="contact-details">
+    <h2>{{ contact.nombre }}</h2>
+    <p><strong>Empresa:</strong> {{ contact.empresa }}</p>
+    <p><strong>Notas:</strong> {{ contact.notas }}</p>
+    <p><strong>Cumpleaños:</strong> {{ contact.fecha_nacimiento | date }}</p>
+    <p><strong>Website:</strong> <a href="{{ contact.pagina_web }}" target="_blank">{{ contact.pagina_web }}</a></p>
+  </div>
+
+  <div class="actions">
+    <button class="btn edit-btn" [routerLink]="['/contactos/editar', contactId]">Editar</button>
+    <!-- <button class="btn delete-btn" (click)="deleteContact()">Delete</button> -->
+    <button class="btn back-btn" [routerLink]="['/contactos']">Volver</button>
+  </div>
+</div>

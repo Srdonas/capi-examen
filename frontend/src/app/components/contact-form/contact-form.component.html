@@ -1,0 +1,35 @@
+<div class="form-container">
+  <h1>{{ isEditMode ? 'Editar Contacto' : 'Nuevo Contacto' }}</h1>
+
+  <form (ngSubmit)="saveContact()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" [(ngModel)]="contact.nombre" name="nombre" required />
+    </div>
+
+    <div class="form-group">
+      <label for="empresa">Empresa</label>
+      <input type="text" id="empresa" [(ngModel)]="contact.empresa" name="empresa" />
+    </div>
+
+    <div class="form-group">
+      <label for="notas">Notas</label>
+      <textarea id="notas" [(ngModel)]="contact.notas" name="notas"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="pagina_web">Website</label>
+      <input type="url" id="pagina_web" [(ngModel)]="contact.pagina_web" name="pagina_web" />
+    </div>
+
+    <div class="form-group">
+      <label for="fecha_nacimiento">Fecha de nacimiento</label>
+      <input type="date" id="fecha_nacimiento" [(ngModel)]="contact.fecha_nacimiento" name="fecha_nacimiento" />
+    </div>
+
+    <div class="form-actions">
+      <button class="btn save-btn" type="submit">{{ isEditMode ? 'Actualizar' : 'Agregar' }}</button>
+      <button class="btn cancel-btn" type="button" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</div>
